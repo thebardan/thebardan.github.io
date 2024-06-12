@@ -6,12 +6,13 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #333;
-            color: #fff;
+            background-color: #6AE74F;
+            color: #000;
             padding: 20px;
         }
         #chatbox {
-            background-color: #444;
+            background-color: #fff;
+            color: #000;
             padding: 10px;
             border-radius: 5px;
             margin-bottom: 10px;
@@ -33,7 +34,7 @@
     </style>
 </head>
 <body>
-    <h1>Converse com o Agente GPT</h1>
+    <h1>Onde está minha requisição?</h1>
     <div id="chatbox"></div>
     <input type="text" id="userInput" placeholder="Digite sua mensagem...">
     <button onclick="sendMessage()">Enviar</button>
@@ -51,7 +52,7 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': 'OPENAI_API_KEY' // substitua isso pela variável de ambiente configurada
+                        'Authorization': 'Bearer SUA_CHAVE_API_AQUI'
                     },
                     body: JSON.stringify({
                         prompt: userInput,
