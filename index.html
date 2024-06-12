@@ -48,11 +48,12 @@
             }
 
             try {
+                const apiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
                 const response = await fetch('https://api.openai.com/v1/engines/davinci-codex/completions', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': 'Bearer SUA_CHAVE_API_AQUI'
+                        'Authorization': `Bearer ${apiKey}`
                     },
                     body: JSON.stringify({
                         prompt: userInput,
